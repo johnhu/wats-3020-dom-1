@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let doneItem = document.createElement("li");
         doneItem.textContent = textItem;
         document.getElementById("done-list").appendChild(doneItem);
+        this.parentElement.remove();
 
         if (this.nextSibling.style.textDecoration == "line-through") {
           this.nextSibling.style.textDecoration = "";
